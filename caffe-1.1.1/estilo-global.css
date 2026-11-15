@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* ==========================================================================
+   ESTILO GLOBAL (layer "theme") — personalização do projeto
+   --------------------------------------------------------------------------
+   Esta é a ÚLTIMA layer da ordem oficial (base, layout, components,
+   utilities, theme): o que for escrito aqui vence o core sem precisar de
+   !important nem de seletores mais específicos. É o lugar certo para
+   sobrescrever tokens e ajustar componentes no seu projeto.
+
+   Hoje contém apenas estilos exclusivos da página de demonstração. Classes
+   genéricas (lead-text, action-group, btn-sm, section-alt, brand-title) vivem
+   no core, em ui.css e core.css.
+   ========================================================================== */
+
+@layer theme {
+  /* Grid de demonstração (mais flexível que u-grid para cards de demo) */
+  .demo-grid {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
+
+  /* Espaçamento entre seções da demo */
+  .demo-section + .demo-section {
+    margin-block-start: var(--sp-xl);
+  }
+}
